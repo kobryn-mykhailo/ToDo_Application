@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TODO app</title>
+	<meta charset="UTF-8">
+    
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js" async="async"></script>
+	<script type="text/javascript" src="js/items_store.js" async="async"></script>
+	<script type="text/javascript" src="js/todod.js" async="async"></script>
+
+</head>
+<body>
+	<div class="form-group">
+	<h1>TODO app (Homework Example)</h1>
+	<div id="list">
+		<ol id="itemsToDo">
+			
+		</ol>
+	</div>
+		<input id="textItem" class="form-control" type="text" name="information" placeholder="Write up something"></input>
+		<input id="addButton" class="btn btn-success" type="button" value="Add a task" ></input>
+	</div>
+	<div class="modal" id="modal-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4>Edit</h4>
+					<button class="close" type="button" data-dismiss="modal"><span class="closecross"></span></button>
+				</div>
+				<div class="modal-body">
+			 		<input class="form-control" id="content" type="text" name="information" ></input>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-primary" id="secondButton" type="button" data-dismiss="modal">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
