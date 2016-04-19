@@ -1,4 +1,4 @@
-	loadItemsToDo();
+	// loadItemsToDo();
 	var button = document.getElementById("addButton");
 	button.addEventListener("click", bottonOn, false);
 	var button2 = document.getElementById("secondButton");
@@ -19,13 +19,17 @@ function bottonOn() {
 		var iElement = document.createElement("i");
 		li.innerHTML = job;
 		li.addEventListener("click", popup, false); //to call popup
-   		
+   		var currentDate = new Date();
+   		var key = currentDate.getTime();
+		li.setAttribute("id", key);
 		li.setAttribute("data-toggle", "modal");
 		li.setAttribute("data-target", "#modal-1");
 		ol.appendChild(li);
 		li.appendChild(iElement);
 		cross();
-		save(job);
+		localRemove();
+		save(key, job) // function to save key and value to the local storage
+
 	};
 }
 //ADDING THE CROSS (x) AND DELETING ON IT'S CLICK
